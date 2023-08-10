@@ -41,7 +41,7 @@ const ApplyDoctor = () => {
     } catch (error) {
       dispatch(hideLoading());
       console.log(error);
-      message.error("Somthing Went Wrrong ");
+      message.error("Something Went Wrrong ");
     }
   };
   return (
@@ -64,8 +64,6 @@ const ApplyDoctor = () => {
             <Form.Item
               label="Last Name"
               name="lastName"
-              required
-              rules={[{ required: true }]}
             >
               <Input type="text" placeholder="your last name" />
             </Form.Item>

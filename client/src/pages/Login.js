@@ -1,11 +1,10 @@
 import React from "react";
 import "../styles/RegiserStyles.css";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 import { Form, Input, message } from "antd";
 import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -20,7 +19,8 @@ const Login = () => {
         localStorage.setItem("token", res.data.token);
         message.success("Login Successfully");
         navigate("/");
-      } else {
+      } 
+      else {
         message.error(res.data.message);
       }
     } catch (error) {
@@ -29,6 +29,7 @@ const Login = () => {
       message.error("something went wrong");
     }
   };
+  
   return (
     <div className="form-container ">
       <Form
@@ -54,5 +55,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;

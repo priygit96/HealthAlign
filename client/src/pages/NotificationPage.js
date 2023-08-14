@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "./../components/Layout";
 import { message, Tabs } from "antd";
-import { useSelector, useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
+import { useSelector, useDispatch } from "react-redux";
+import Layout from "./../components/Layout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -34,7 +34,7 @@ const NotificationPage = () => {
     } catch (error) {
       dispatch(hideLoading());
       console.log(error);
-      message.error("somthing went wrong");
+      message.error("something went wrong");
     }
   };
 
@@ -60,7 +60,7 @@ const NotificationPage = () => {
     } catch (error) {
       dispatch(hideLoading());
       console.log(error);
-      message.error("Somthing Went Wrong In Ntifications");
+      message.error("Something went wrong in notifications");
     }
   };
   return (

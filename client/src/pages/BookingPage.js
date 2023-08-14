@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { DatePicker, message, TimePicker } from "antd";
 import moment from "moment";
+import { DatePicker, message, TimePicker } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
 
@@ -34,7 +34,7 @@ const BookingPage = () => {
       console.log(error);
     }
   };
-  // ============ handle availiblity
+  // handle availiblity
   const handleAvailability = async () => {
     try {
       dispatch(showLoading());
@@ -60,7 +60,7 @@ const BookingPage = () => {
       console.log(error);
     }
   };
-  // =============== booking func
+  //  booking func
   const handleBooking = async () => {
     try {
       setIsAvailable(true);

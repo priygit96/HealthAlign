@@ -1,7 +1,7 @@
 const express = require("express");
 const colors = require("colors");
-const moragan = require("morgan");
 const dotenv = require("dotenv");
+const moragan = require("morgan");
 const connectDB = require("./config/db");
 
 //dotenv conig
@@ -27,7 +27,6 @@ const port = process.env.PORT || 8080;
 //listen port
 app.listen(port, () => {
   console.log(
-    `Server Running in ${process.env.NODE_MODE} Mode on port ${process.env.PORT}`
-      .bgCyan.white
+    `Server Running in ${process.env.NODE_MODE} Mode on port ${process.env.PORT}`.bgCyan.white
   );
 });

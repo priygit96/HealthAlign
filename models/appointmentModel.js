@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const appointmentSchema = new mongoose.Schema(
   {
     userId: {
@@ -34,7 +33,5 @@ const appointmentSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
 const appointmentModel = mongoose.model("appointments", appointmentSchema);
-
 module.exports = appointmentModel;

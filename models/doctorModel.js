@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const doctorSchema = new mongoose.Schema(
   {
     userId: {
@@ -46,11 +45,10 @@ const doctorSchema = new mongoose.Schema(
     },
     timings: {
       type: Object,
-      required: [true, "wrok timing is required"],
+      required: [true, "work timing is required"],
     },
   },
   { timestamps: true }
 );
-
 const doctorModel = mongoose.model("doctors", doctorSchema);
 module.exports = doctorModel;

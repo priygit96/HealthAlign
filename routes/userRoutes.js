@@ -13,11 +13,10 @@ const {
 } = require("../controllers/userCtrl");
 const authMiddleware = require("../middlewares/authMiddleware");
 
-//router onject
+//router object
 const router = express.Router();
 
-//routes
-//LOGIN || POST
+//routes //LOGIN || POST
 router.post("/login", loginController);
 
 //REGISTER || POST
@@ -26,16 +25,16 @@ router.post("/register", registerController);
 //Auth || POST
 router.post("/getUserData", authMiddleware, authController);
 
-//APply Doctor || POST
+//Apply Doctor || POST
 router.post("/apply-doctor", authMiddleware, applyDoctorController);
 
-//Notifiaction  Doctor || POST
+//Notification  Doctor || POST
 router.post(
   "/get-all-notification",
   authMiddleware,
   getAllNotificationController
 );
-//Notifiaction  Doctor || POST
+//Notification  Doctor || POST
 router.post(
   "/delete-all-notification",
   authMiddleware,
@@ -48,7 +47,7 @@ router.get("/getAllDoctors", authMiddleware, getAllDocotrsController);
 //BOOK APPOINTMENT
 router.post("/book-appointment", authMiddleware, bookeAppointmnetController);
 
-//Booking Avliability
+//Booking Availability
 router.post(
   "/booking-availbility",
   authMiddleware,
@@ -57,5 +56,4 @@ router.post(
 
 //Appointments List
 router.get("/user-appointments", authMiddleware, userAppointmentsController);
-
 module.exports = router;

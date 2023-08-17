@@ -5,7 +5,6 @@ const {
   changeAccountStatusController,
 } = require("../controllers/adminCtrl");
 const authMiddleware = require("../middlewares/authMiddleware");
-
 const router = express.Router();
 
 //GET METHOD || USERS
@@ -20,5 +19,4 @@ router.post(
   authMiddleware,
   changeAccountStatusController
 );
-
 module.exports = router;
